@@ -13,7 +13,7 @@ const HomeComponent = () => {
                 <h2>
                     <span className="logo"> Plus1 </span>
                     Workout Track & Eval Application</h2>
-                <img src="https://www.swiss-miss.com/wp-content/uploads/legacy/photos/uncategorized/2008/08/06/image-480x133.jpg" />
+                <img src="https://www.swiss-miss.com/wp-content/uploads/legacy/photos/uncategorized/2008/08/06/image-480x133.jpg" alt=""/>
                 <br /><br /><br /><br /><br /><br /><br />
                 <p>Developers: Tao Jin, Meng Wang, Mingyang Wang, Jin Zhang.</p>
                 <footer>

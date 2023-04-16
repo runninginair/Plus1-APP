@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../user-nav/nav.js";
 import { updateWeight, updateHeight } from "./update-user-profile.js";
-import { Container, Col, Row, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { UserLogin } from "./find-user.js";
 
 const UserComponent = () => {
@@ -17,6 +17,8 @@ const UserComponent = () => {
 
     useEffect(() => {
         userLogin();
+        setUserWeight();
+        setUserHeight();
     }, []);
 
 
@@ -37,7 +39,7 @@ const UserComponent = () => {
                 <h1>Hello, <span >{currUser.firstName}</span>! Welcome Back!</h1>
                 <span className="ms-5">
                     <img className="rounded-circle" height={88}
-                        src={image_src} alt="avator image" />
+                        src={image_src} alt="avator" />
                 </span>
             </center>
 
@@ -46,7 +48,7 @@ const UserComponent = () => {
                     <li>User: {currUser.firstName} {currUser.lastName} </li><br />
                     
                     <li>Phone: {currUser.phone} </li><br />
-                    <li>Previous Weight: {currUser.weight} bls</li><br />
+                    <li>Weight: {userWeight || currUser.weight} bls</li><br />
 
                     <input
                         type="text"
@@ -58,7 +60,7 @@ const UserComponent = () => {
                         alert("Your Weight Information Updated Successfully.")
                     }}> Update Weight </button><br /><br />
 
-                    <li>Previous Height: {currUser.height} inch</li><br />
+                    <li>Height: {userHeight || currUser.height} inch</li><br />
 
                     <input
                         type="text"

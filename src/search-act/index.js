@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { findActivities } from "./find-activites.js";
 import NavBar from "../user-nav/nav.js";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
 const SearchActScreen = () => {
@@ -21,9 +21,7 @@ const SearchActScreen = () => {
     }
 
     useEffect(() => {
-        if (searchTerm) {
-            searchAct();
-        }
+        if (searchTerm) { }
     }, [searchTerm]);
 
     return (
@@ -32,7 +30,7 @@ const SearchActScreen = () => {
                 <br />{<NavBar />}<br />
                 <span className="ms-5">
                     <img className="rounded-circle" height={88}
-                        src={image_src} alt="avator image" />
+                        src={image_src} alt="avator" />
                 </span>
 
                 <h2>Search Your Activities by Date</h2>
