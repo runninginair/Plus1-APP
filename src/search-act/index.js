@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "../user-nav/nav.js";
 import { useParams } from "react-router-dom";
-import { findCalories } from "../search-calories/find-calories.js";
+import { findActivities } from "./find-activites.js";
 
 
 const SearchActScreen = () => {
@@ -16,7 +16,7 @@ const SearchActScreen = () => {
 
 
     const searchAct = async () => {
-        const response = await findCalories(date, user_Id);
+        const response = await findActivities(date, user_Id);
         setResults(response);
     }
 
