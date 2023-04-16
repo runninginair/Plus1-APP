@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { findActivities } from "./find-activites.js";
 import NavBar from "../user-nav/nav.js";
 import { useParams } from "react-router-dom";
+import { findCalories } from "../search-calories/find-calories.js";
 
 
 const SearchActScreen = () => {
@@ -16,7 +16,7 @@ const SearchActScreen = () => {
 
 
     const searchAct = async () => {
-        const response = await findActivities(date, user_Id);
+        const response = await findCalories(date, user_Id);
         setResults(response);
     }
 
@@ -47,9 +47,6 @@ const SearchActScreen = () => {
                 </button>
 
                 <h3>Activites Summary</h3>
-
-                {searchTerm && console.log(searchTerm)}
-
 
                 <div className="table-responsive">
                     <table className="table">

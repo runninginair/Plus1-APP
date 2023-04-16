@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../user-nav/nav.js";
 import { updateWeight, updateHeight } from "./update-user-profile.js";
-import { Container } from "react-bootstrap";
 import { UserLogin } from "./find-user.js";
 
 const UserComponent = () => {
@@ -36,43 +35,46 @@ const UserComponent = () => {
         <div>
             <center><br />
                 {<NavBar />}
-                <h1>Hello, <span >{currUser.firstName}</span>! Welcome Back!</h1>
+                <h1>Hello, <span className="fw-bold">{currUser.firstName}</span>! Welcome Back!</h1>
                 <span className="ms-5">
                     <img className="rounded-circle" height={88}
                         src={image_src} alt="avator" />
                 </span>
             </center>
 
-            <Container>
-                <ul>
-                    <li>User: {currUser.firstName} {currUser.lastName} </li><br />
-                    
+            <div className="container align-content-center ms-5">
+                <ul className="fw-semibold">
+                    <li>User: <span className="text-primary fw-bolder">
+                        {currUser.firstName} {currUser.lastName}</span>
+                    </li><br />
+
                     <li>Phone: {currUser.phone} </li><br />
-                    <li>Weight: {userWeight || currUser.weight} bls</li><br />
+                    <li>Weight: <span className="fw-bolder text-success">{userWeight || currUser.weight} </span> bls</li><br />
 
                     <input
                         type="text"
                         onChange={(e) => setWeight(e.target.value)} />
-                    <button onClick={() => {
-                        // console.log("Weight:", weight);
+                    <button className="btn btn-success fw-bold ms-3" 
+                        onClick={() => {
                         updateWeight(user_Id, weight);
                         setUserWeight(weight);
                         alert("Your Weight Information Updated Successfully.")
                     }}> Update Weight </button><br /><br />
 
-                    <li>Height: {userHeight || currUser.height} inch</li><br />
+                    <li>Height: <span className="fw-bolder text-success">
+                        {userHeight || currUser.height} </span> inch </li><br />
 
                     <input
                         type="text"
                         onChange={(e) => setHeight(e.target.value)} />
-                    <button onClick={() => {
-                        // console.log("Height:", weight);
+                    <button className="btn btn-success fw-bold ms-3" 
+                        onClick={() => {
                         updateHeight(user_Id, height);
                         setUserHeight(height);
                         alert("Your height information updated successfully.")
                     }}> Update Height</button><br /><br />
                 </ul>
-            </Container>
+            </div>
 
             {/* <pre> {JSON.stringify(currUser, null, 2)} </pre> */}
 
