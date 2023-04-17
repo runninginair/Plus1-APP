@@ -1,11 +1,9 @@
 import axios from 'axios';
-
-const ACTIVITY_API = 'http://localhost:8080';
+import PLUSONE_SERVER_API from '../server-api.js';
 
 const findActivities = async (date, uid) => {
-    const response = await axios.get(`${ACTIVITY_API}/activities/${uid}/date/${date}`);
+    const response = await axios.get(`${PLUSONE_SERVER_API}/activities/${uid}/date/${date}`);
     const activities = response.data;
-    // console.log(activities);
     return activities;
 }
 

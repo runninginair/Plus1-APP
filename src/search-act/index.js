@@ -17,6 +17,7 @@ const SearchActScreen = () => {
 
     const searchAct = async () => {
         const response = await findActivities(date, user_Id);
+        alert("If there is a record of activity during this date, the search results will be displayed below...");
         setResults(response);
     }
 
@@ -28,7 +29,7 @@ const SearchActScreen = () => {
         <div>
             <center>
                 <br />{<NavBar />}<br />
-                <span className="ms-5">
+                <span>
                     <img className="rounded-circle" height={88}
                         src={image_src} alt="avator" />
                 </span>
