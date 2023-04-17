@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+React project SET ENV:
+
+sodu install npm
+npm install react
+npm install node
+npm install bootstrap
+npm install react-route
+npm install react-redux
+npm install react-redux-dom
+
+### sodu install nvm // "nvm" stands for node version control manager.
+
 ## Available Scripts
 
 In the project directory, you can run:

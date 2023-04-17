@@ -38,12 +38,14 @@ const SearchActScreen = () => {
                 <input
                     type="date"
                     id="date"
-                    className="form-control"
+                    className="form-control mb-2"
                     value={date}
-                    onChange={(e) => setDate(e.target.value)} />
+                    onChange={(e) => setDate(e.target.value)}
+                    style={{ width: "60%" }} />
 
-                <button className={"btn btn-primary"}
-                    onClick={searchAct}>Search
+                <button className={"btn btn-primary mb-3"}
+                    onClick={searchAct} >
+                    Search
                 </button>
 
                 <h3>Activites Summary</h3>
