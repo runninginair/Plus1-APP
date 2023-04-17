@@ -14,6 +14,7 @@ const SearchDistanceScreen = () => {
     const [results, setResults] = useState('');
 
     const searchDis = async () => {
+        alert("System Calculating, Please wait...");
         const response = await findDistance(user_Id, startDate, endDate);
         setResults(response);
     }

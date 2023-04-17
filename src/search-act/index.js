@@ -16,8 +16,8 @@ const SearchActScreen = () => {
 
 
     const searchAct = async () => {
-        const response = await findActivities(date, user_Id);
         alert("If there is a record of activity during this date, the search results will be displayed below...");
+        const response = await findActivities(date, user_Id);
         setResults(response);
     }
 
