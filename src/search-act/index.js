@@ -17,6 +17,7 @@ const SearchActScreen = () => {
 
     const searchAct = async () => {
         const response = await findActivities(date, user_Id);
+        alert("If there is a record of activity during this date, the search results will be displayed below...");
         setResults(response);
     }
 
@@ -28,7 +29,7 @@ const SearchActScreen = () => {
         <div>
             <center>
                 <br />{<NavBar />}<br />
-                <span className="ms-5">
+                <span>
                     <img className="rounded-circle" height={88}
                         src={image_src} alt="avator" />
                 </span>
@@ -38,12 +39,14 @@ const SearchActScreen = () => {
                 <input
                     type="date"
                     id="date"
-                    className="form-control"
+                    className="form-control mb-2"
                     value={date}
-                    onChange={(e) => setDate(e.target.value)} />
+                    onChange={(e) => setDate(e.target.value)}
+                    style={{ width: "60%" }} />
 
-                <button className={"btn btn-primary"}
-                    onClick={searchAct}>Search
+                <button className={"btn btn-primary mb-3"}
+                    onClick={searchAct} >
+                    Search
                 </button>
 
                 <h3>Activites Summary</h3>

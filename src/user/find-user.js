@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-const ACTIVITY_API = 'http://localhost:8080';
-
+import PLUSONE_SERVER_API from '../server-api';
 
 const UserLogin = async (userId) => {
-    const response = await axios.get(`${ACTIVITY_API}/user/${userId}`);
+    const response = await axios.get(`${PLUSONE_SERVER_API}/user/${userId}`);
     const user = response.data;
     return user;
 }
