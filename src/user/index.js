@@ -49,7 +49,7 @@ const UserComponent = () => {
                     </li><br />
 
                     <li>Phone: {currUser.phone} </li><br />
-                    <li>Weight: <span className="fw-bolder text-success">{userWeight || currUser.weight} </span> bls</li><br />
+                    <li>Weight: <span className="fw-bolder text-success">{userWeight || currUser.weight} </span> lb</li><br />
 
                     <input
                         type="text"

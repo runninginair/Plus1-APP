@@ -14,6 +14,7 @@ const SearchCaloriesScreen = () => {
     const [results, setResults] = useState('');
 
     const searchCal = async () => {
+        alert("System Calculating, Please wait...");
         const response = await findCalories(user_Id, startDate, endDate);
         setResults(response);
     }
