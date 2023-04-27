@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-import PLUSONE_SERVER_API from '../server-api';
+import PLUSONE_SERVER_API from '../server-api.js';
 // /activity/getCaloriesByTimeRange/{userId}/{start}/{end}
 
 const findCalories = async (userId, startDate, endDate) => {
